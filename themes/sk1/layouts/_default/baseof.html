@@ -10,6 +10,12 @@
 	</div>
 	{{- partial "footer.html" . -}}
 	</main>
+<script type="text/javascript">
+    let navigationDom = document.querySelector(".navigation"); 
+    document.querySelector(".header__menu").addEventListener('click', function (event) {
+        navigationDom.classList.toggle('navigation--active'); 
+      })
+  </script>	
 </body>
 
 </html>
