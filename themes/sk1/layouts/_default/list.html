@@ -28,6 +28,15 @@
 	{{end}}
 </ul>
 
+ h1 {{ .Title }}
+  {{ range (.Data.Pages.GroupByDate "2006") }}
+    h2 {{ .Key }}
+    ul.post-list
+      {{ range .Pages }}
+        li {{ .Render "li" }}
+      {{ end }}
+  {{ end }}
+
 <!--pagination-->
 {{template "_internal/pagination.html" .}}
 
