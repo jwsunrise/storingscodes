@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+  	{{ .Content }}
+
+ {{ range (where .Site.RegularPages "Section" "in" "notes essays").GroupByDate "2006" }}
+
+	<h2 class="index__date"><span class="index__date__year">{{ .Key }}</span></h2>
+
+    {{ range .Pages }}
+    	<article class="index__item">
+    		<div class="index__item__meta">
+    			<!-- {{ if eq .Section "notes" }}
+    			<span class='index__item__icon'></span>
+    			{{ end }} -->
+    			<span class="index__item__title__date">{{ .PublishDate.Format "Jan 2" }}</span> 
+    		</div>
+			<h2 class='index__item__title {{ if eq .Section "notes" }}index__item__title--subtle{{ end }}'><a title="{{ .Title | title }}" href='{{ strings.TrimSuffix "/" .Permalink }}'>{{ .Title | title }}</a></h2>
+		</article>
+    {{ end }}
+    <br><br>
+{{ end }}
+
+{{ end }} 

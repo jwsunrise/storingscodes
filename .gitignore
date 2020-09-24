@@ -1,0 +1,5 @@
+/resources/*
+/public/*
+
+# Ignore junk files
+.DS_Store
