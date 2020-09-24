@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>J.W. Boelens</title>
+    <link>http://example.org/</link>
+    <description>Recent content on J.W. Boelens</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hi!</title>
+      <link>http://example.org/posts/hi/</link>
+      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/hi/</guid>
+      <description>👋 Hi! Welcome at my new website: jwb.co
+The last couple of months (years&amp;hellip;?) I&amp;rsquo;ve dabbled with building a personal website. Do I need a website? Nope. But I like to build and design stuff. For my job this is what I do a lot, but having something personal on the web is new for me. I don&amp;rsquo;t have any social media accounts (I hate Facebook and Twitter), so having a place to put something online is nice.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://example.org/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/about/</guid>
+      <description>Hardware My main machine is a Lenovo ThinkPad T420 from 2011. It runs Linux Mint 20. It has a Intel i5-2520M, 8gb of RAM and a 128gb SSD. It&amp;rsquo;s old, but a great machine to tinker with. For the mouse, I use a Logitech MX Master 2.
+My phone is a iPhone 8+ from 2017. It runs the latest beta of iOS 14. It still runs as fine as the day I got it, so no reason to upgrade (besides the fact that it&amp;rsquo;s too big&amp;hellip;).</description>
+    </item>
+    
+    <item>
+      <title>Books</title>
+      <link>http://example.org/books/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/books/</guid>
+      <description>Digital Minimalism
+Cal Newport
+12.05.2020
+De lengte van het leven
+Seneca
+21.08.2019
+Dune
+Frank Herbert
+13.08.2019
+Artemis
+Andy Weir
+07.06.2018
+Stoïcijnse levenskunst: evenveel geluk als wijsheid
+Miriam van Reijen
+31.05.2018
+Meditations ★
+Marcus Aurelius
+30.05.2018
+Redenen om te blijven leven
+Matt Haig
+02.04.2018
+De zeven eigenschappen voor succes in je leven
+Stephen Covey
+28.03.2018
+Minimalism for Regular People
+Michael Martins
+31.03.2018
+Everything That Remains: A Memoir by The Minimalists
+Joshua Fields Millburn</description>
+    </item>
+    
+  </channel>
+</rss>

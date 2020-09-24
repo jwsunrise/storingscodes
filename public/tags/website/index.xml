@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website on J.W. Boelens</title>
+    <link>http://example.org/tags/website/</link>
+    <description>Recent content in Website on J.W. Boelens</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/website/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hi!</title>
+      <link>http://example.org/posts/hi/</link>
+      <pubDate>Wed, 09 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/posts/hi/</guid>
+      <description>👋 Hi! Welcome at my new website: jwb.co
+The last couple of months (years&amp;hellip;?) I&amp;rsquo;ve dabbled with building a personal website. Do I need a website? Nope. But I like to build and design stuff. For my job this is what I do a lot, but having something personal on the web is new for me. I don&amp;rsquo;t have any social media accounts (I hate Facebook and Twitter), so having a place to put something online is nice.</description>
+    </item>
+    
+  </channel>
+</rss>
