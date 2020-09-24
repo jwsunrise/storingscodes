@@ -1,0 +1,15 @@
+{{define "main"}}
+
+<!--Content-->
+{{.Content}}
+
+<!--Date-->
+<date>{{.Date.Format "2006-01-02"}}</date>
+
+<tags>
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+  {{ end }}
+</tags>
+
+{{end}}
