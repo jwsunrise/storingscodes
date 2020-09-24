@@ -1,0 +1,5 @@
+baseURL = "https://janwillem.xyz/"
+languageCode = "en-us"
+title = "janwillem.xyz"
+theme = "blank"
+paginate = "300"

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Hugo Snippets</title>
+	
+	
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,600&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<header>
+<a href="/" class="logo">boelens.xyz</a>
+</header>
+
+	
+	<main>
+		<article>
+			<h1>Hugo Snippets</h1>
+			<p>List pages</p>
+<pre><code>{{ partial &quot;header&quot; . }}
+&lt;div class=&quot;main&quot;&gt;
+	&lt;div class=&quot;article&quot;&gt;
+		{{ range .Pages }}
+		&lt;h2 class=&quot;wiki_list_title&quot;&gt;&lt;a href={{ .Permalink }}&gt;{{ .Title }}&lt;/a&gt;&lt;/h2&gt;
+		{{ end }}
+	&lt;/div&gt;
+&lt;/div&gt;	
+{{ partial &quot;footer&quot; . }}
+</code></pre><p>List all pages in a tree</p>
+<pre><code>{{ $home := .Site.Home }}
+&lt;div class=&quot;css-treeview box&quot;&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;input type=&quot;checkbox&quot; id=&quot;item-0&quot; checked=&quot;checked&quot; /&gt;&lt;label for=&quot;item-0&quot;&gt;Home&lt;/label&gt;
+		&lt;ul&gt;
+		{{ template &quot;section-tree-nav&quot; $home }}
+		&lt;/ul&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+{{ define &quot;section-tree-nav&quot; }}
+{{ range .Sections.Reverse}}
+&lt;li&gt;
+	&lt;li&gt;&lt;input type=&quot;checkbox&quot; id=&quot;item-0-0&quot; checked=&quot;checked&quot;/&gt;&lt;label for=&quot;item-0-0&quot;&gt;{{ .Title }}&lt;/label&gt;
+	&lt;ul&gt;
+		{{ range .Pages }}
+		&lt;li&gt;&lt;a href=&quot;{{ .RelPermalink}}&quot;&gt;{{ .Title }}&lt;/a&gt;&lt;/li&gt;
+		{{ end }}
+		&lt;ul&gt;
+		{{ template &quot;section-tree-nav&quot; . }}
+		&lt;/ul&gt;
+	&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/li&gt;
+{{ end }}
+{{ end }}
+</code></pre><p>Photos</p>
+<pre><code>![Speed!](https://f000.backblazeb2.com/file/boelens/IMG_21471.jpg)
+</code></pre>
+		</article>
+	</main>
+
+	<footer>
+	<p>&copy; 2020</p>
+</footer>
+
+</body>
+</html>
