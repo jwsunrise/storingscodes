@@ -3,4 +3,4 @@ theme   = "sk1"
 title   = "SK1"
 
 [permalinks]
-    post = "/:year/:month/:day/:slug"
+    posts = "/:year/:month/:day/:slug"
