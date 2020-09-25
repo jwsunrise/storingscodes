@@ -10,12 +10,10 @@
 {{$paginator := .Paginate $p}}
 
 <!--list-->
-<ul>
 	{{range $paginator.Pages}}
-	<li><date>{{.Date.Format "2006-01-02"}} | </date> <a href="{{.RelPermalink}}">{{.Title}}</a></li>
+	<date><a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a></date>
   {{ .Content }}
 	{{end}}
-</ul>
 
 <!--pagination-->
 {{template "_internal/pagination.html" .}}
