@@ -10,3 +10,6 @@ subtitle     = "A Hugo Theme"
 endLevel   = 6
 ordered    = false
 startLevel = 1
+
+[permalinks]
+  posts = "/:year/:month/:title/"
