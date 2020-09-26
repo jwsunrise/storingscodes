@@ -11,7 +11,7 @@
 
 <!--list-->
 	{{range $paginator.Pages}}
-  {{ .Content }}
+  {{ .Title }}
   {{ range .Params.season }}
     {{ . | urlize }}">{{ . }}
   {{ end }}
