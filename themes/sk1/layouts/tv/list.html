@@ -12,9 +12,10 @@
 <!--list-->
 {{range $paginator.Pages}}
 <tvlist>
-	{{ .Title }}{{ if .Params.favorite Yes }}
-yes
-{{ end }}
+	{{ .Title }}
+	
+	{{if .Params.favorite}}yes{{else}}{{ .Site.Params.favorite }}{{end}}
+	
 		{{ range .Params.season }}
 			<season>{{ . }}</season>
 		{{ end }}
