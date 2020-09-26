@@ -2,6 +2,8 @@
 
 <h3>Latest Posts</h3>
 
+{{- range ( where site.RegularPages "Section" "posts" | first 3 ) }}
+
   {{ range first 2 .Data.Pages }}
     {{ if eq .Type "post"}}
       {{ .Title }}
