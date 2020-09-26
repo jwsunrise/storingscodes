@@ -16,7 +16,7 @@
 	{{end}}
 </ul>
 
-  {{ range first 2 .Data.Pages }}
+  {{ range last 2 .Data.Pages }}
     {{ if eq .Type "post"}}
       {{ .Content }}
     {{ end }}
