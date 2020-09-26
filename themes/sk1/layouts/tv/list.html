@@ -13,9 +13,7 @@
 {{range $paginator.Pages}}
 <tvlist>
 	{{ .Title }}{{ if gt .Params.favorite Yes }}
-{{ $emoji = 😎}}
-{{ else if gt .Params.favorite 100 }}
-{{ $emoji = 🥵}}
+yes
 {{ end }}
 		{{ range .Params.season }}
 			<season>{{ . }}</season>
