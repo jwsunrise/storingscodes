@@ -12,9 +12,9 @@
 <!--list-->
 {{range $paginator.Pages}}
 	{{ .Title }}
-		<tags>{{ range .Params.season }}
-			{{ . }}
-		{{ end }}</tags>
+		{{ range .Params.season }}
+			<season>{{ . }}</season>
+		{{ end }}
 {{end}}
 
 {{end}}
