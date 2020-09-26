@@ -14,7 +14,7 @@
 <tvlist>
 	{{ .Title }}{{ if gt .Params.favorite Yes }}
 {{ $emoji = 😎}}
-{{ else if gt .Params.temperature 100 }}
+{{ else if gt .Params.favorite 100 }}
 {{ $emoji = 🥵}}
 {{ end }}
 		{{ range .Params.season }}
