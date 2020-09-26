@@ -12,7 +12,7 @@
 <!--list-->
 {{range $paginator.Pages}}
 <tvlist>
-	{{ .Title }}{{ if gt .Params.favorite Yes }}
+	{{ .Title }}{{ if .Params.favorite Yes }}
 yes
 {{ end }}
 		{{ range .Params.season }}
