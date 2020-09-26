@@ -22,7 +22,7 @@
     {{ end }}
   {{ end }}
 
-  {{ range first 2 .Data.Pages }}
+  {{ range last 2 .Data.Pages }}
     {{ if eq .Type "notes"}}
       {{ .Content }}
     {{ end }}
