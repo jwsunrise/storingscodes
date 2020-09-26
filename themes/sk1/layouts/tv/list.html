@@ -10,15 +10,11 @@
 {{$paginator := .Paginate $p}}
 
 <!--list-->
-	{{range $paginator.Pages}}
-  {{ .Title }}
-  {{ range .Params.season }}
-    {{ . }}
-  {{ end }}
-	{{end}}
-
-<!--pagination-->
-{{template "_internal/pagination.html" .}}
+{{range $paginator.Pages}}
+	{{ .Title }}
+		{{ range .Params.season }}
+			{{ . }}
+		{{ end }}
+{{end}}
 
 {{end}}
-    
