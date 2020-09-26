@@ -2,6 +2,7 @@
 title: "Hi!"
 date: 2020-09-09
 tags : ["Website", "Design"]
+type: "post"
 ---
 
 # 👋 Hi!
