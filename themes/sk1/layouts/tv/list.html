@@ -12,15 +12,12 @@
 <!--list-->
 	{{range $paginator.Pages}}
   {{ .Content }}
-	{{end}}
-
 <ul id="tags">
   {{ range .Params.season }}
     <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
   {{ end }}
 </ul>
-
-
+	{{end}}
 
 <!--pagination-->
 {{template "_internal/pagination.html" .}}
