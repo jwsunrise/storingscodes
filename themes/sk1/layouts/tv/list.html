@@ -12,7 +12,11 @@
 <!--list-->
 {{range $paginator.Pages}}
 <tvlist>
-	{{ .Title }}
+	{{ .Title }}{{ if gt .Params.favorite Yes }}
+{{ $emoji = 😎}}
+{{ else if gt .Params.temperature 100 }}
+{{ $emoji = 🥵}}
+{{ end }}
 		{{ range .Params.season }}
 			<season>{{ . }}</season>
 		{{ end }}
