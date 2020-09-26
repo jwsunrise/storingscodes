@@ -14,6 +14,12 @@
   {{ .Content }}
 	{{end}}
 
+{{ if .Params.season }}
+  <strong>Director{{ if gt (len .Params.season) 1 }}s{{ end }}:</strong>
+  {{ range $index, $season := .Params.season }}{{ if gt $index 0 }}, {{ end }}<a href="{{ "/season/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+{{ end }}
+
+
 <!--pagination-->
 {{template "_internal/pagination.html" .}}
 
