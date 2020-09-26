@@ -14,7 +14,7 @@
 <tvlist>
 	{{ .Title }}
 	
-	{{if .Params.favorite}}<star>☆</star>{{else}}{{ .Site.Params.favorite }}{{end}}
+	{{if .Params.favorite}}<star>★</star>{{else}}{{ .Site.Params.favorite }}{{end}}
 	
 		{{ range .Params.season }}
 			<season>{{ . }}</season>
