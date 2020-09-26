@@ -11,10 +11,12 @@
 
 <!--list-->
 {{range $paginator.Pages}}
+<tvlist>
 	{{ .Title }}
 		{{ range .Params.season }}
 			<season>{{ . }}</season>
 		{{ end }}
+</tvlist>
 {{end}}
 
 {{end}}
