@@ -12,11 +12,9 @@
 <!--list-->
 	{{range $paginator.Pages}}
   {{ .Content }}
-<ul id="tags">
   {{ range .Params.season }}
-    <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a> </li>
+    {{ . | urlize }}">{{ . }}
   {{ end }}
-</ul>
 	{{end}}
 
 <!--pagination-->
