@@ -1,7 +1,7 @@
 {{define "main"}}
 
   {{ range last 2 .Data.Pages }}
-    {{ if eq .Type "post"}}
+    {{ if eq .Type "posts"}}
       {{ .Content }}
 <li><date>{{.Date.Format "2006-01-02"}} | </date> <a href="{{.RelPermalink}}">{{.Title}}</a></li>
     {{ end }}
