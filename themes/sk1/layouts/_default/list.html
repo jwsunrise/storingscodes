@@ -3,7 +3,7 @@
 <h3>Latest Posts</h3>
 
   {{ range first 2 .Data.Pages }}
-    {{ if eq .Type "posts"}}
+    {{ if eq .Type "post"}}
       {{ .Title }}
       <date><a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a></date>
     {{ end }}
