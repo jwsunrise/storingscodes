@@ -17,6 +17,12 @@
 </ul>
 
   {{ range first 2 .Data.Pages }}
+    {{ if eq .Type "posts"}}
+      {{ .Content }}
+    {{ end }}
+  {{ end }}
+
+  {{ range first 2 .Data.Pages }}
     {{ if eq .Type "notes"}}
       {{ .Content }}
     {{ end }}
