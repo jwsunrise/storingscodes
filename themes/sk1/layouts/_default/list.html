@@ -17,7 +17,7 @@
 </ul>
 
   {{ range first 2 .Data.Pages }}
-    {{ if eq .Type "posts"}}
+    {{ if eq .Type "post"}}
       {{ .Content }}
     {{ end }}
   {{ end }}
