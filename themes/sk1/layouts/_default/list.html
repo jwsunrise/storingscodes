@@ -16,7 +16,13 @@
 	{{end}}
 </ul>
 
-  {{ range first 10 .Data.Pages }}
+  {{ range first 2 .Data.Pages }}
+    {{ if eq .Type "notes"}}
+      {{ .Content }}
+    {{ end }}
+  {{ end }}
+
+  {{ range first 2 .Data.Pages }}
     {{ if eq .Type "quotes"}}
       {{ .Content }}
     {{ end }}
