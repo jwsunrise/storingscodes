@@ -7,7 +7,7 @@
 {{else if eq .Kind "taxonomy"}}
 {{$p = $p.ByTitle}}
 {{end}}
-{{$paginator := (where .Site.Pages "Type" "post") }}
+{{$paginator := .Paginate $p}}
 
 <!--list-->
 <ul>
