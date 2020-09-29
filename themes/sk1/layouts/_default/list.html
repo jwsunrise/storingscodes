@@ -15,15 +15,19 @@
 <p>During the day I work at Sunrise Medical, where I build stuff for the web. At night, I dream about pizza.</p>
 </intro>
 
-{{ range .Data.Pages.GroupByDate "2006" }}
-  <h4>{{ .Key }}</h4>
-  <!-- ANOTHER WAY: <div style="margin-left: 2em" id="list"></div> -->
-  <ul>
-    {{ range .Pages }}
-    {{ .Render "li"}}<li><date>{{.Date.Format "2006-01-02"}} | </date> <a href="{{.RelPermalink}}">{{.Title}}</a></li>
-    {{ end }}
-  </ul>
-  {{ end }}
+ {{ range (.Site.RegularPages.GroupByDate "2006") }}
+            <h3>{{ .Key }}</h3>
+
+            <ul class="archive-list">
+                {{ range (where .Pages "Type" "post") }}
+                    <li>
+                        {{ .PublishDate.Format "02 Jan" }}
+                        - 
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        {{ end }}
 
 <tags>
   {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
