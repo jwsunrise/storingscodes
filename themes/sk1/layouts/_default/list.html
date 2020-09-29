@@ -6,6 +6,13 @@
 <p>During the day I work at Sunrise Medical, where I build stuff for the web. At night, I dream about pizza.</p>
 </intro>
 
+{{ range (where .Pages "Type" $type) }}
+              {{ if (eq ($.Scratch.Get "count") 1) }}
+                {{ $.Scratch.Set "count" 0 }}
+                <h1 class="title is-4 has-text-weight-normal">{{ .Date.Format "2006" }}</h1>
+              {{ end }}
+            {{ end }}
+
  {{ range (.Site.RegularPages.GroupByDate "2006") }}
             <h3>{{ .Key }}</h3>
 
