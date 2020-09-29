@@ -10,15 +10,3 @@
       <date><a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a></date>
     {{ end }}
   {{ end }}
-
-
-<h3>Latest Notes</h3>
-
-  {{ range first 2 .Data.Pages }}
-    {{ if eq .Type "notes"}}
-      <date><a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a></date>
-        {{ .Content }}
-    {{ end }}
-  {{ end }}
-
-  {{ end }}
