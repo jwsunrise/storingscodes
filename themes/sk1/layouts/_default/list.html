@@ -21,12 +21,4 @@
     {{ end }}
   {{ end }}
 
-<h3>Latest Quotes</h3>
-
-  {{ range .Data.Pages }}
-    {{ if eq .Type "quotes" }}
-      {{ .Content }}
-    {{ end }}
-  {{ end }}
-
   {{ end }}
