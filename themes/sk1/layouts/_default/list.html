@@ -20,7 +20,7 @@
   <!-- ANOTHER WAY: <div style="margin-left: 2em" id="list"></div> -->
   <ul>
     {{ range .Pages }}
-    {{ .Render "li"}}
+    {{ .Render "li"}}<li><date>{{.Date.Format "2006-01-02"}} | </date> <a href="{{.RelPermalink}}">{{.Title}}</a></li>
     {{ end }}
   </ul>
   {{ end }}
