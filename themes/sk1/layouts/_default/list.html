@@ -15,6 +15,15 @@
 <p>During the day I work at Sunrise Medical, where I build stuff for the web. At night, I dream about pizza.</p>
 </intro>
 
+ h1 {{ .Title }}
+  {{ range (.Data.Pages.GroupByDate "2006") }}
+    h2 {{ .Key }}
+    ul.post-list
+      {{ range .Pages }}
+        li {{ .Render "li" }}
+      {{ end }}
+  {{ end }}
+
 <tags>
   {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
     <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
@@ -27,8 +36,5 @@
 	<li><date>{{.Date.Format "2006-01-02"}} | </date> <a href="{{.RelPermalink}}">{{.Title}}</a></li>
 	{{end}}
 </ul>
-
-<!--pagination-->
-{{template "_internal/pagination.html" .}}
 
 {{end}} 
