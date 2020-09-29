@@ -1,6 +1,7 @@
 ---
 title: "I Don’t Care Anymore"
 date: 2020-09-22
+type: "post"
 ---
 
 # I Don’t Care Anymore
