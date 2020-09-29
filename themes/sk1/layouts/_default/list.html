@@ -1,5 +1,17 @@
 {{define "main"}}
 
+<!--$paginator-->
+{{$p := .Pages}}
+{{if .IsHome}}
+{{$p = where site.RegularPages "Type" "in" site.Params.mainSections}}
+{{else if eq .Kind "taxonomy"}}
+{{$p = $p.ByTitle}}
+{{end}}
+{{$paginator := .Paginate $p}}
+
+<intro>
+<p>Hi, I'm 40 years old, have a cat named Bob and hate Facebook. I have no need for a website, but here we are.</p>
+
 <p>During the day I work at Sunrise Medical, where I build stuff for the web. At night, I dream about pizza.</p>
 </intro>
 
@@ -16,14 +28,7 @@
 	{{end}}
 </ul>
 
- h1 {{ .Title }}
-  {{ range (.Data.Pages.GroupByDate "2006") }}
-    h2 {{ .Key }}
-    ul.post-list
-      {{ range .Pages }}
-        li {{ .Render "li" }}
-      {{ end }}
-  {{ end }}
-
 <!--pagination-->
 {{template "_internal/pagination.html" .}}
+
+{{end}} 
