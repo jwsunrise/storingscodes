@@ -1,12 +1,29 @@
 {{define "main"}}
 
-<h3>Latest Posts</h3>
+<p>During the day I work at Sunrise Medical, where I build stuff for the web. At night, I dream about pizza.</p>
+</intro>
 
-{{- range ( where site.RegularPages "Section" "notes" | first 3 ) }}
-
-  {{ range first 2 .Data.Pages }}
-    {{ if eq .Type "post"}}
-      {{ .Title }}
-      <date><a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a></date>
-    {{ end }}
+<tags>
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
   {{ end }}
+</tags>
+
+<!--list-->
+<ul>
+	{{range $paginator.Pages}}
+	<li><date>{{.Date.Format "2006-01-02"}} | </date> <a href="{{.RelPermalink}}">{{.Title}}</a></li>
+	{{end}}
+</ul>
+
+ h1 {{ .Title }}
+  {{ range (.Data.Pages.GroupByDate "2006") }}
+    h2 {{ .Key }}
+    ul.post-list
+      {{ range .Pages }}
+        li {{ .Render "li" }}
+      {{ end }}
+  {{ end }}
+
+<!--pagination-->
+{{template "_internal/pagination.html" .}}
