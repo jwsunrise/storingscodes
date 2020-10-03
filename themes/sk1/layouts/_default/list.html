@@ -12,7 +12,7 @@
             <ul class="archive-list">
                 {{ range (where .Pages "Type" "post") }}
                     <li>
-                        {{ .PublishDate.Format "02 Jan" }}
+                        <date>{{ .PublishDate.Format "02 Jan" }}</date>
                         - 
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </li>
