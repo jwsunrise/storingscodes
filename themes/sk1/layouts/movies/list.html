@@ -1,8 +1,10 @@
 {{define "main"}} 
 {{ range .Pages }}
-        <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} {{.Params.year}}</a>
-         <div class="star" style="width:{{.Params.rating}}"></div>
-        </li>
+<movies>
+  <li>
+    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+   <div class="star" style="width:{{.Params.rating}}"></div>
+  </li>
+</movies>
     {{ end }}
 {{ end }}
