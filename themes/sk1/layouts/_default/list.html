@@ -7,13 +7,12 @@
 </intro>
 
 
-            <ul class="archive-list">
-                {{ range (where .Pages "Type" "post") }}
-                    <li>
-                        <date>{{ .PublishDate.Format "02 Jan 2006" }}</date>
-                         
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    </li>
-                {{ end }}
-            </ul>
+<ul class="archive-list">
+    {{ range (where .Pages "Type" "post") }}
+        <li>                
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <date>{{ .PublishDate.Format "02 Jan 2006" }}</date>
+        </li>
+    {{ end }}
+</ul>
 {{ end }}
