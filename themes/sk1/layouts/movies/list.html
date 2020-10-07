@@ -1,6 +1,6 @@
  {{ range .Pages }}
         <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} {{.Year}}</a>
-         <div class="star" style="width:{{.Rating}}"></div>
+            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} {{.Params.year}}</a>
+         <div class="star" style="width:{{.Params.rating}}"></div>
         </li>
     {{ end }}
