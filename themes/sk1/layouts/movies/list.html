@@ -2,7 +2,7 @@
 {{ range .Pages }}
 <movies>
   <li>
-    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+    {{.Title}} <date>{{.Date.Format "2006-01-02"}}</date>
    <div class="star" style="width:{{.Params.rating}}"></div>
   </li>
 </movies>
