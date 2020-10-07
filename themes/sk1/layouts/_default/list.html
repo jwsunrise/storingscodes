@@ -6,18 +6,14 @@
 <p>During the day I work at Sunrise Medical, where I build stuff for the web. At night, I dream about pizza.</p>
 </intro>
 
- {{ range (.Site.RegularPages.GroupByDate "2006") }}
-            <h3>{{ .Key }}</h3>
 
             <ul class="archive-list">
                 {{ range (where .Pages "Type" "post") }}
                     <li>
-                        <date>{{ .PublishDate.Format "02 Jan" }}</date>
+                        <date>{{ .PublishDate.Format "02 Jan 2006" }}</date>
                          
                         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                     </li>
                 {{ end }}
             </ul>
-        {{ end }}
-
-{{end}} 
+{{ end }}
