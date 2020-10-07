@@ -2,7 +2,7 @@
 {{ range .Pages }}
 <movies>
   <li>
-    {{.Title}} {{.Params.brouwer}} <div class="star" style="width:{{.Params.rating}}"></div> <date>{{.Date.Format "2006-01-02"}}</date>
+    {{.Params.brouwer}} {{.Title}} <div class="star" style="width:{{.Params.rating}}"></div> <date>{{.Date.Format "2006-01-02"}}</date>
   </li>
 </movies>
     {{ end }}
