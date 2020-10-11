@@ -1,5 +1,7 @@
 {{define "main"}} 
 
+{{ range first 10 (where .Site.Pages "Type" "post") }}
+
 {{ range .Data.Pages.GroupByDate "January 2006" }}
   <h4>{{ .Key }}</h4>
 
@@ -11,6 +13,8 @@
   </li>
 </notes>
     {{ end }}
+{{ end }}
+
 {{ end }}
 
 {{ end }}
