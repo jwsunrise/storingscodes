@@ -3,7 +3,7 @@
 {{ range .Data.Pages.GroupByDate "January 2006" }}
   <h4>{{ .Key }}</h4>
 
-{{ range (where .Pages "Type" "note") }}
+{{ $paginator := .Paginate (where .Pages "Type" "note") 5 }}
 <notes>
   <li>
   {{ .Content }}
