@@ -1,29 +1,3 @@
-{{define "main"}}
-
-<!--$paginator-->
-{{$p := .Pages}}
-{{if .IsHome}}
-{{$p = where site.RegularPages "Type" "in" site.Params.mainSections}}
-{{else if eq .Kind "taxonomy"}}
-{{$p = $p.ByTitle}}
-{{end}}
-{{$paginator := .Paginate $p}}
-
-<!--list-->
-{{range $paginator.Pages}}
-<tvlist>
-	{{ .Title }}
-	
-	{{if .Params.favorite}}<star>★</star>{{else}}{{ .Site.Params.favorite }}{{end}}
-	
-		{{ range .Params.season }}
-			<season>{{ . }}</season>
-		{{ end }}
-</tvlist>
-{{end}}
-
-{{end}}
-
 {{define "main"}} 
 {{ range .Pages }}
 <movies>
