@@ -1,15 +1,14 @@
 {{define "main"}} 
 
-{{ range .Data.Pages.GroupByDate "January 2006" }}
-  <h4>{{ .Key }}</h4>
+{{ $paginator := .Paginate (where .Site.Pages "Type" "note") 5 }}
 
-{{ range (where .Pages "Type" "note") }}
 <notes>
   <li>
   {{ .Content }}
     <date>{{.Date.Format "2006-01-02"}}</date>
   </li>
 </notes>
-    {{ end }}
+
 {{ end }}
+
 {{ end }}
