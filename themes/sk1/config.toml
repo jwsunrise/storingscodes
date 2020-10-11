@@ -1,7 +1,6 @@
 baseURL = "https://sk1.jsiu.dev"
 theme   = "sk1"
 title   = "SK1"
-Paginate = 4
 
 [permalinks]
     posts = "/:year/:month/:day/:slug"
