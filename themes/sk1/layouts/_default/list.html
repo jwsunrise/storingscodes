@@ -1,6 +1,6 @@
 {{define "main"}} 
 
-{{ range .Data.Pages.GroupByDate "January" }}
+{{ range .Data.Pages.GroupByDate "January, 06" }}
   <h4>{{ .Key }}</h4>
 
 {{ range (where .Pages "Type" "note") }}
