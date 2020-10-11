@@ -1,5 +1,6 @@
 ---
 title: "Fargo"
 season: ["S01", "S02", "S03"]
-type: "tv"
+type: tv
+favorite: yes
 ---
