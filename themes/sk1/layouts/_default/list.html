@@ -1,7 +1,7 @@
 {{define "main"}}
 
 <ul class="archive-list">
-    {{ range (where .Pages "Type" "post") }}
+    {{ range (where .Pages "Type" "note") }}
         <li>                
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             <date>{{ .PublishDate.Format "02 Jan 2006" }}</date>
