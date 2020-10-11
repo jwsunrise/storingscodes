@@ -1,6 +1,7 @@
 ---
 title: "Bialetti"
 date: 2020-10-11
+type: "note"
 ---
 
 I've bought a Bialetti Macincaffee coffee grinder last week. It's a manual grinder that costs about 30 euro. 
