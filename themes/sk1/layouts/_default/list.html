@@ -1,6 +1,6 @@
 {{define "main"}} 
 
-{{ $paginator := .Paginate (where .Data.Pages "Type" "note") 5 }}
+{{ range .Paginator.Pages }}
 
 <notes>
   <li>
@@ -10,5 +10,7 @@
 </notes>
 
 {{ end }}
+
+{{ template "_internal/pagination.html" . }}
 
 {{ end }}
