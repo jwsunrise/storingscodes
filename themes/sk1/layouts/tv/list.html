@@ -2,7 +2,7 @@
 {{ range .Pages }}
 <tv>
   <li>
-    {{.Title}} {{if .Params.favorite}}<star>★</star>{{else}}h{{end}}
+    {{.Title}} {{if .Params.favorite}}<star>★</star>{{else}}{{end}}
 	{{ range .Params.season }}<season>{{ . }}</season>{{ end }}  
 </li>
 </tv>
