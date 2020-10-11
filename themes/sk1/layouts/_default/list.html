@@ -1,11 +1,10 @@
-{{define "main"}}
-
-<ul class="archive-list">
-    {{ range (where .Pages "Type" "note") }}
-        <li>                
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            <date>{{ .PublishDate.Format "02 Jan 2006" }}</date>
-        </li>
+{{define "main"}} 
+{{ range (where .Pages "Type" "note") }}}
+<notes>
+  <li>
+  {{ .Content }}
+    <date>{{.Date.Format "2006-01-02"}}</date>
+  </li>
+</notes>
     {{ end }}
-</ul>
 {{ end }}
