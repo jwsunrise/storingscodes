@@ -4,6 +4,13 @@
 <link rel=icon href=data:,>
 <style>
 
+@font-face{
+	font-family:Tiempos Headline;
+	font-style:normal;
+	font-weight:700;
+	src:url("/static/TiemposHeadlineWeb-Bold.woff2") format("woff2"),url("/static/TiemposHeadlineWeb-Bold.woff") format("woff")
+}
+	
 html {
   background-color: #f1f1f1;
     -webkit-font-smoothing: antialiased;
@@ -101,13 +108,14 @@ ul {
     list-style: none;
 }
 .logo {
-  border-bottom: none;
-  line-height: 1.2;
-  font-size: 22px;
-  letter-spacing: -0.05em;
-  color: #121212;
-font-style: normal;
-font-weight: 700;
+	font-family:Tiempos Headline;
+	border-bottom: none;
+	line-height: 1.2;
+	font-size: 22px;
+	letter-spacing: -0.05em;
+	color: #121212;
+	font-style: normal;
+	font-weight: 700;
 }
 p {
     margin: 0 0 1.5em 0;
