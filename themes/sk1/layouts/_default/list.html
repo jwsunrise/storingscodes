@@ -1,6 +1,6 @@
 {{define "main"}} 
 
-{{ range .Paginator.Pages }}
+{{ range .Paginator.Pages (where .Pages "Type" "note") }}
 
 <notes>
   <li>
