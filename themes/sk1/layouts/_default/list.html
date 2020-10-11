@@ -3,7 +3,7 @@
 {{ range .Data.Pages.GroupByDate "January 2006" }}
   <h4>{{ .Key }}</h4>
 
-{{ range (where .Paginator.Pages "Type" "note") }}
+{{ range first 10 (where .Data.Pages "Type" "note") }}
 <notes>
   <li>
   {{ .Content }}
