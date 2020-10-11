@@ -1,6 +1,6 @@
 {{define "main"}} 
 
-{{ $paginator := .Paginate (where .Date.Pages "Type" "notes") }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "notes") }}
 {{ range .Paginator.Pages }}
 
 <notes>
