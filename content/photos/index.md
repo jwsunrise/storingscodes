@@ -1,4 +1,6 @@
-draft: false
+---
+title: Photos
+layout: page
 ---
 
 {{< gallery >}} 
