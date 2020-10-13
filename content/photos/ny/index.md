@@ -4,4 +4,4 @@ date: 2020-08-10T20:39:13+02:00
 draft: true
 ---
 
-{{< gallery >}} 
+{{< img src="IMG_1720.JPG" alt="Screenshot of the Onion homepage" >}}
