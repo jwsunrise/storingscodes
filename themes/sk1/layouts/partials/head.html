@@ -181,10 +181,11 @@ notes {
     display: block;
 }	
 notes li {
-    list-style: none;
-    margin-bottom: 1em;
+	list-style: none;
+	margin-bottom: 1em;
+	postition: absolute;
 }
-notes li::before {
+notes ul:not(.list-none) li::before {
     position: absolute;
     width: 6px;
     height: 6px;
@@ -192,7 +193,7 @@ notes li::before {
     background: #2292f1;
     border-radius: 50%;
     top: .65em;
-    left: -1.55em;
+    left: -1em;
 }
 notes date {
   color: #808080;
