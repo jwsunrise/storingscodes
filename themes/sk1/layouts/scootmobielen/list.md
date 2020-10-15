@@ -1,0 +1,11 @@
+{{define "main"}} 
+
+{{ range .Pages }}
+<notes>
+  <li>
+  {{ .Content }}
+    <date>{{.Date.Format "2006-01-02"}}</date>
+  </li>
+</notes>
+{{ end }}
+{{ end }}
