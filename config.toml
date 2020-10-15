@@ -1,5 +1,5 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "J.W. Boelens"
+title = "storings.codes"
 theme = "sk1"
 paginate = 4
