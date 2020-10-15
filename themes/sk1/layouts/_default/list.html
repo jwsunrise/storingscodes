@@ -1,15 +1,9 @@
 {{define "main"}} 
 
-{{ $paginator := .Paginate (where .Pages "Type" "note") }}
-{{ range (.Paginator 2).Pages }}
-
-<notes>
-  {{ .Content }}
-    <date>{{.Date.Format "2006-01-02"}}</date>
-</notes>
-
+{{ range where .Pages "Section" "scootmobielen" }}
+{{ range .Pages
+{{ .Title }}
 {{ end }}
-
-{{ partial "pagination.html" . }}
+{{ end }}
 
 {{ end }}
