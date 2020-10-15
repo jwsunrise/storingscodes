@@ -3,8 +3,7 @@
 {{ range .Pages }}
 <notes>
   <li>
-  {{ .Content }}
-    <date><a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a></date>
+  <a href="{{.RelPermalink}}">{{.Title}}</a>
   </li>
 </notes>
 {{ end }}
