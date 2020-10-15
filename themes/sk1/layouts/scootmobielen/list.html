@@ -4,7 +4,7 @@
 <notes>
   <li>
   {{ .Content }}
-    <date>{{.Date.Format "2006-01-02"}}</date>
+    <date><a href="{{.RelPermalink}}">{{.Date.Format "2006-01-02"}}</a></date>
   </li>
 </notes>
 {{ end }}
