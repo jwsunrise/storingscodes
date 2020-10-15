@@ -1,6 +1,6 @@
 ---
 title: "Trophy"
-type: "product"
+product: "ja"
 date: 2020-10-05
 ---
 
