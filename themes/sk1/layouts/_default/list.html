@@ -1,9 +1,7 @@
 {{define "main"}} 
 
-{{ range (where .Pages "Type" "product") }}
-{{ range .Pages
-{{ .Title }}
-{{ end }}
+{{ range first 10 .Site.Pages }}
+	<a href="{{ .Permalink }}">{{ .Tite }}</a>
 {{ end }}
 
 {{ end }}
