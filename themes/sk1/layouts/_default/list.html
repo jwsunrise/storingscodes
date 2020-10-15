@@ -1,6 +1,6 @@
 {{define "main"}} 
 
-{{ range where .Pages "Type" "product" }}
+{{ range (where .Pages "Type" "product") }}
 {{ range .Pages
 {{ .Title }}
 {{ end }}
