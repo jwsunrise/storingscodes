@@ -1,6 +1,6 @@
 {{define "main"}} 
 
-{{ range .Pages sort .Params.title }}
+{{ range .Data.Pages.ByTitle }}
 <notes>
   <li>
   <a href="{{.RelPermalink}}">{{.Title}}</a>
