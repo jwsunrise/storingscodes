@@ -1,7 +1,17 @@
 {{define "main"}} 
 
-{{ range first 10 .Site.Pages }}
-	<a href="{{ .Permalink }}">{{ .Tite }}</a>
+{{ $paginator := .Paginate (where .Pages "Type" "note") }}
+{{ range (.Paginator 2).Pages }}
+
+<notes>
+  <li>
+  {{ .Content }}
+    <date>{{.Date.Format "2006-01-02"}}</date>
+  </li>
+</notes>
+
 {{ end }}
+
+{{ partial "pagination.html" . }}
 
 {{ end }}
