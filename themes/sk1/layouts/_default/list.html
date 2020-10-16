@@ -1,17 +1,12 @@
 {{define "main"}} 
 
-{{ $paginator := .Paginate (where .Pages "Type" "note") }}
-{{ range (.Paginator 2).Pages }}
-
-<notes>
-  <li>
-  {{ .Content }}
-    <date>{{.Date.Format "2006-01-02"}}</date>
-  </li>
-</notes>
-
+<ul class="section-one-and-two-pages">
+{{ range .Site.Pages.ByPublishDate.Reverse }}
+    {{ if or (eq .Section "scootmobielen") (eq .Section "elektrische-rolstoelen")}}
+   <li>{{.Title}}</li>
+    {{end}}
 {{ end }}
+</ul>
 
-{{ partial "pagination.html" . }}
 
 {{ end }}
