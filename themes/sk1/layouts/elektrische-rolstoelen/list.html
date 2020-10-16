@@ -1,0 +1,10 @@
+{{define "main"}} 
+
+{{ range .Data.Pages.ByTitle }}
+<notes>
+  <li>
+  <a href="{{.RelPermalink}}">{{.Title}}</a>
+  </li>
+</notes>
+{{ end }}
+{{ end }}
