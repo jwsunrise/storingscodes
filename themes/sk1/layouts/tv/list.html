@@ -1,10 +1,21 @@
-{{define "main"}} 
-{{ range .Pages }}
-<tv>
-  <li>
-    {{.Title}} {{if .Params.favorite}}<star>★</star>{{else}}{{end}}
-	{{ range .Params.season }}<season>{{ . }}</season>{{ end }}  
-</li>
-</tv>
-    {{ end }}
-{{ end }}
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+
+<body>
+	<main>
+	{{- partial "get-csv.html" . -}}
+	<div id="content">
+		{{- block "main" . }}{{- end }}
+	</div>
+	{{- partial "footer.html" . -}}
+	</main>
+<script type="text/javascript">
+    let navigationDom = document.querySelector(".navigation"); 
+    document.querySelector(".header__menu").addEventListener('click', function (event) {
+        navigationDom.classList.toggle('navigation--active'); 
+      })
+  </script>	
+</body>
+
+</html>
